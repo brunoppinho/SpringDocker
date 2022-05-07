@@ -1,0 +1,26 @@
+version: "3"
+services:
+  spring-app:
+    image: letscode/spring-docker:0.1
+    ports:
+      - "8585:8080"
+    networks:
+      - letscode-exemplo
+    depends_on:
+      - mysql-banco
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-banco:3306/springdockerdb?allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SERVER_PORT=8080
+
+  mysql-banco:
+    image: mysql:8
+    networks:
+      - letscode-exemplo
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=springdockerdb
+
+networks:
+  letscode-exemplo:
