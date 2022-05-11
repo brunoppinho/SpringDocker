@@ -23,7 +23,11 @@ O agrupamento de uma aplicação com suas dependências, que compartilham o kern
 # Instalação
 
 No site oficial do docker há um tutorial para instalação do docker de acordo com seu sistema
-operacional. https://docs.docker.com/get-docker/
+operacional. 
+
+https://docs.docker.com/get-docker/
+
+https://gist.github.com/luizomf/8bc93474de107bff6ee09b1ceee481df
 
 # Hello World
 
@@ -99,7 +103,7 @@ Executando uma imagem do CentOS na sua máquina.
 Utilize o comando abaixo para verificar se está rodando a imagem correta
 > cat /etc/redhat-release
 
-Para sair sem finalizar o container aperte ctrl+p+q.
+Para sair sem finalizar o container aperte ctrl+p+q ou ctrl+z + ctrl c.
 
 Para voltar ao container digite:
 
